@@ -44,7 +44,6 @@ class App extends Component {
     const text = svg.selectAll("text").data(data, d => d[0]);
   
     text.exit().transition()
-      .duration(2000)
       .remove();
   
     text.transition()
