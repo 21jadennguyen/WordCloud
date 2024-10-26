@@ -77,23 +77,15 @@ class App extends Component {
   render() {
     return (
       <div className="parent">
-        <div className="child1" style={{ width: 1000 }}>
-          <textarea type="text" id="input_field" style={{ height: 150, width: 1000 }} />
-          <button
-            type="submit"
-            value="Generate Matrix"
-            style={{ marginTop: 10, height: 40, width: 1000 }}
-            onClick={() => {
-              const input_data = document.getElementById("input_field").value;
-              this.setState({ wordFrequency: this.getWordFrequency(input_data) });
-            }}
-          >
-            Generate WordCloud
-          </button>
+        <div className="child1" style={{width: 1000 }}>
+        <textarea type="text" id="input_field" style={{ height: 150, width: 1000 }}/>
+          <button type="submit" value="Generate Matrix" style={{ marginTop: 10, height: 40, width: 1000 }} onClick={() => {
+                var input_data = document.getElementById("input_field").value
+                this.setState({wordFrequency:this.getWordFrequency(input_data)})
+              }}
+            > Generate WordCloud</button>
         </div>
-        <div className="child2">
-          <svg className="svg_parent"></svg>
-        </div>
+        <div className="child2"><svg className="svg_parent"></svg></div>
       </div>
     );
   }
